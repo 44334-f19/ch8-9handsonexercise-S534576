@@ -1,13 +1,103 @@
 <!DOCTYPE html> 
 <html lang="en"> 
 	<head> 
-		<title>LASTNAME Chapter8-9HandsOnExercise</title> 
+		<title>Calderon Chapter8-9HandsOnExercise</title> 
 		<meta charset="utf-8"> 
 		<style>
-		
+		  table, th, td {margin: auto;
+                    border: 2px solid #000999;
+                    border-spacing: 0px;
+                    font-family: sans-serif, helvetica;
+                    border-collapse: collapse;
+                    padding: 0.5em;
+                    text-align: left;
+                    background-color: beige;}
+            form {background-color: beige;}
+            caption {font-size: 1.2em;}
+            wrapper {display: flex;
+                    flex-direction: row;}
+            label {}
+            textarea{overflow-y: scroll;}
+            #felxcol1 {flex: 3;}
+            #flexcol2 {flex: 4;}
+            #flexcol3 {flex: 3;}
+            input [type="radio"], input[type="checkbox"] {display: inline;}
+            
+            @media only screen and (max-width: 768px) {
+                form { display:flex;
+                        flex-direction: column;
+                        flex: 50%;}
+                wrapper { flex: 50%;}
+         	
+}
+            
 		</style>
 	</head> 
 <body> 
-
+    <h1>Music, Movies and more</h1>
+        <table>
+            <caption>My favorite film</caption>
+                <thread>
+                    <tr>
+                        <th>Title</th>
+                        <th>Goodfellas</th>                  
+                    </tr>
+                </thread>
+                <tbody>
+                    <tr>
+                        <td>Director</td>
+                        <td>Martin Scorsese</td>                  
+                    </tr>
+                    <tr>
+                        <td>Leading actor</td>
+                        <td>Ray Liotta</td>
+                    </tr> 
+                    <tr>
+                        <td>Leading actress</td>
+                        <td>Lorraine Bracco</td>
+                    </tr>
+                        <td>brief description</td>
+                        <td>Henry Hill is a young adult who was born into an Italian mob family in New York City in the 1970's. The lifestyle and traditions of being in the mob brings serious problems to his life.</td>
+                    <tr>
+                        <td>Review link</td>
+                        <td><a href="https://www.rottentomatoes.com/m/1032176_goodfellas">Rotten Tomatoes review</a></td>
+                    </tr>
+                </tbody>   
+        </table>
+<h1>Music Survey</h1>
+    <form>
+        <div id="wrapper">
+        <fieldset id="flexcol1">
+            <label for="myName">Name:</label>
+                    <input type="text" name="myName" id="myName" 
+                    placeholder="your first and last name"><br>            
+                    <label for="myEmail">Email:</label>
+                    <input type="email" name="myEmail" placeholder="your Email">
+            
+                    <label for="describe the music you like"><br>Describe the music you like</label>
+                    <textarea rows="3" cols="70" style="overflow:scroll;"></textarea>
+            </fieldset>
+            <fieldset id="flexcol2"> 
+                    <legend>favorite genres</legend>
+                    select genre:<br>
+                    <input type="radio" name="genre" id="c" value="country">Country<br>
+                    <input type="radio" name="genre" id="hh" value="hiphop">hiphop<br>
+                    <input type="radio" name="genre" id="r" value="rock">rock<br>               
+            </fieldset>
+            <fieldset id="flexcol3"> 
+                    <legend>concerts</legend>
+                    <label>how many musical concerts have you been to?</label><br>
+                    <select size="3" name="conerts" id="concerts" value="concerts">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    </select>
+            </fieldset>
+            <p>Ricky Calderon S534576@nwmissouri.edu</p>
+            <input id="mySubmit" type="submit" value="Submit">
+            <input id="reset" type="reset" value="reset">   
+    </div>
+    </form>   
 </body> 
 </html> 
